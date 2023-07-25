@@ -1,14 +1,22 @@
 import * as React from 'react'
-
-// 1. import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react'
+import Home from './components/Home'
+import Login from './components/Login'
+import Register from './components/Register'
+import {Routes,Route} from 'react-router-dom'
 
 function App() {
-  // 2. Wrap ChakraProvider at the root of your app
+
   return (
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
+   
+      <>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>} />
+        </Routes>
+      </>
+    
   )
 }
+export default App
 
