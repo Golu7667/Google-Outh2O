@@ -1,8 +1,9 @@
 import * as React from 'react'
-import Home from './components/Home'
 import Account from './components/Account'
 import {Routes,Route} from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
+
+
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
   return (
    
     <GoogleLogin
-    clientId=""
+    clientId="655942281917-5m0p1pula6h5ivnvkb3lni39alf9cq61.apps.googleusercontent.com"
     buttonText="Login with google"
     responseType="code"
     redirectUri="postmessage"
