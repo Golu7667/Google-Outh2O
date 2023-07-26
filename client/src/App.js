@@ -1,20 +1,36 @@
 import * as React from 'react'
 import Home from './components/Home'
-import Login from './components/Login'
-import Register from './components/Register'
+import Account from './components/Account'
 import {Routes,Route} from 'react-router-dom'
+import GoogleLogin from 'react-google-login';
+
 
 function App() {
-
+  const responseGoogle = async (authResult) => {
+    try {
+      if (authResult['code']) {
+      
+        console.log("hi");
+       
+      } else {
+        throw new Error(authResult);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
    
-      <>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/register" element={<Register/>} />
-        </Routes>
-      </>
+    <GoogleLogin
+    clientId=""
+    buttonText="Login with google"
+    responseType="code"
+    redirectUri="postmessage"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'} 
+  />
+     
     
   )
 }
