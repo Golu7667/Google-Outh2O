@@ -3,14 +3,14 @@ const session = require("express-session");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const path = require("path");
-const ejs = require("ejs");
+
 
 const dotenv = require("dotenv");
 dotenv.config("../");
 
 const app = express();
 
-app.set("view engine", "ejs");
+
 
 app.use(
   session({
@@ -49,17 +49,17 @@ passport.deserializeUser(function (obj, cb) {
 });
 
 // Serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, "public")));
+
 
 app.get("/login", (req, res) => {
-  res.render(path.join(__dirname, "..", "login.ejs"));
+ 
 });
 
 app.get("/dashboard", (req, res) => {
   // check if user is logged in
   if (req.isAuthenticated()) {
     console.log(req);
-    res.render(path.join(__dirname, "..", "dashboard.ejs"), { user: req.user });
+   
   } else {
     res.redirect("/login");
   }
@@ -88,6 +88,6 @@ app.get("/logout", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server started on http://localhost:3000");
+app.listen(8000, () => {
+  console.log("Server started on http://localhost:8000");
 });
