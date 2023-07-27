@@ -3,7 +3,7 @@ import "./index.css";
 function Home(userDetails) {
 	const user = userDetails.user;
 	const logout = () => {
-		window.open(`http://localhost:8000/auth/logout`, "_self");
+		window.open(`https://googleoauth2o.onrender.com/auth/logout`, "_self");
 	};
 	return (
 		<>

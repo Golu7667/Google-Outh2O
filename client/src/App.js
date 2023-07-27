@@ -11,7 +11,7 @@ function App() {
 
 	const getUser = async () => {
 		try {
-			const url = `http://localhost:8000/auth/login/success`;
+			const url = `https://googleoauth2o.onrender.com/auth/login/success`;
 			const { data } = await axios.get(url, { withCredentials: true });
 			setUser(data.user._json);
 		} catch (err) {
