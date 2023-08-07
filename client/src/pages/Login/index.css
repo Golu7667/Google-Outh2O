@@ -31,6 +31,7 @@
 .left {
     flex: 1.5;
     overflow: hidden;
+    display:none;
     position: relative;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -126,15 +127,15 @@
 
 @media screen and (min-width: 768px){
     .left {
-        display: block;
-        flex: 1.5;
+        /* display: block; */
+        /* flex: 1.5; */
         overflow: hidden;
         position: relative;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
     }
     .form_container {
-        display: flex;
+        display: block;
         margin-top: 45px;
         width:800px;
         height: 450px;

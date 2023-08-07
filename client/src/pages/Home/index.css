@@ -32,6 +32,7 @@
     flex: 1.5;
     overflow: hidden;
     position: relative;
+    display:none;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
