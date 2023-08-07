@@ -1,4 +1,4 @@
-import "./index.css";
+import React from 'react'
 
 function Home(userDetails) {
 	const user = userDetails.user;
