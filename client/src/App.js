@@ -2,8 +2,9 @@ import React,{useState} from 'react'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import {Routes,Route} from 'react-router-dom'
+import {Routes,Route,Navigate} from 'react-router-dom'
 import './App.css'
+import axios from 'axios'
 
 function App() {
 	const [user, setUser] = useState(null);
